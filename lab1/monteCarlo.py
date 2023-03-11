@@ -22,14 +22,13 @@ def monteCarlo_method(num_rectangles, left_limit=1, right_limit=3, S=0):
     S = S*(right_limit - left_limit)/num_rectangles
     delta_i = abs(S - const_integral.const_integrated)
     delta_points.append(delta_i)
+    print("Площа з кількістю точок ",num_rectangles,":", S)
     print("Похибка", round(delta_i, 7))
-    print("Площа", S)
     return S
 
 
 def draw_plot():
-    print(delta_points)
     plt.plot([1, 100, 1000, 5000, 10000, 50000, 100000], delta_points, "bo")
-    plt.ylabel("Area")
-    plt.xlabel("Number of points")
+    plt.ylabel("Похибка")
+    plt.xlabel("Кількість точок")
     plt.show()

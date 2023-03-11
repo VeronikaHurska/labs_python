@@ -14,6 +14,7 @@ def main():
     monteCarlo.monteCarlo_method(50000)
     monteCarlo.monteCarlo_method(100000)
     monteCarlo.draw_plot()
+    print("-----------------------------------------------------------")
 
     rectangle.rectangle_method(1)
     rectangle.rectangle_method(100)
